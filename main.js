@@ -15,7 +15,7 @@ function initializeCustomElements() {
   container.appendChild(button);
 
   // Using the exact selector you provided
-  const targetElement = document.querySelector('body > div._wrapper.js-wrapper._page-loaded > div._content > div:nth-child(2) > div > form > div > div:nth-child(2) > div > div > div._product-details-actions');
+  const targetElement = document.querySelector('div._product-details-actions');
 
   if (targetElement) {
     targetElement.appendChild(container);
