@@ -14,13 +14,14 @@ function initializeCustomElements() {
   // Add button to container
   container.appendChild(button);
 
-  // Find a suitable place to inject our container
-  // Adjust this selector based on your CloudCart page structure
-  const productContainer = document.querySelector('.product-details, .product-container');
-  if (productContainer) {
-    productContainer.appendChild(container);
+  // Using the exact selector you provided
+  const targetElement = document.querySelector('body > div._wrapper.js-wrapper._page-loaded > div._content > div:nth-child(2) > div > form > div > div:nth-child(2) > div > div > div._product-details-actions');
+
+  if (targetElement) {
+    targetElement.appendChild(container);
+    console.log('Successfully injected custom elements');
   } else {
-    console.error('Could not find product container');
+    console.error('Could not find target element');
   }
 }
 
